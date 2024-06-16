@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Cannon.cs" />
     <Compile Include="Assets\Scripts\Scriptables\Colors.cs" />
     <Compile Include="Assets\Scripts\GUI\EditAudioButton.cs" />
+    <Compile Include="Assets\Scripts\AutoLevelSwitch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

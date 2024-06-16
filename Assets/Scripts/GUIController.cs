@@ -12,7 +12,7 @@ public class GUIController : MonoBehaviour
 
     public void SwitchToActive(string defaultLevel)
     {
-        string levelName = PlayerPrefs.GetString("activeLevel", defaultLevel);
+        string levelName = PlayerPrefs.GetString("active", defaultLevel);
 
         SwitchScene(levelName);
     }

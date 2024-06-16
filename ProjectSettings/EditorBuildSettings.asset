@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Samples/Level5.unity
     guid: a4c36386e7f65fe4092f7712b76ee950
   - enabled: 1
+    path: Assets/Scenes/Plot1.unity
+    guid: 2bd819a19e543a647ba8025cec1d494b
+  - enabled: 1
     path: Assets/Scenes/Infinite.unity
     guid: 33ed115b4709df04ea0a06961a0baa66
   - enabled: 1

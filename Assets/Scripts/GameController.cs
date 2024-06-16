@@ -78,6 +78,7 @@ public class GameController : MonoBehaviour
             {
                 int money = (PlayerPrefs.HasKey("money")) ? PlayerPrefs.GetInt("money") : 0;
                 PlayerPrefs.SetString(SceneManager.GetActiveScene().name, "pass");
+                PlayerPrefs.SetString("active", GameController.Instance.nextLevel);
                 PlayerPrefs.SetInt("money", money + moneyAmount);
                 PlayerPrefs.Save();
             }
