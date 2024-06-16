@@ -13,7 +13,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private string nextLevel;
     [SerializeField] private List<ColbController> colbs;
     [SerializeField, Range(0, 100)] private int moneyAmount;
-    [SerializeField] private GameObject winScreen;
 
     public void AddColbController(ColbController colbController)
     {
@@ -82,8 +81,7 @@ public class GameController : MonoBehaviour
                 PlayerPrefs.SetInt("money", money + moneyAmount);
                 PlayerPrefs.Save();
             }
-
-            winScreen.SetActive(true);
+            WinScreenController.Instance.Toggle();
         }
     }
 }

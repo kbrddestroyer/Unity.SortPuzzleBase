@@ -15,7 +15,7 @@ public class EditAudioButton : MonoBehaviour
         AudioPlayerController.Instance.Toggle(
             !AudioPlayerController.Instance.state
             );
-
+        Debug.Log("Bruh!");
         image.sprite = AudioPlayerController.Instance.state ? on : off;
     }
 }
