@@ -892,7 +892,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1799407262}
         m_TargetAssemblyTypeName: GUIController, Assembly-CSharp
-        m_MethodName: SwitchScene
+        m_MethodName: SwitchToActive
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
