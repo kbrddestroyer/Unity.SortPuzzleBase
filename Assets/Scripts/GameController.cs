@@ -39,6 +39,10 @@ public class GameController : MonoBehaviour
         {
             controller.FillPivotPoints();
         }
+
+        PlayerPrefs.SetString("active", SceneManager.GetActiveScene().name);
+
+        PlayerPrefs.Save();
     }
 
     private bool Validate()
@@ -54,14 +58,6 @@ public class GameController : MonoBehaviour
 
     public IEnumerator SwitchScene(string nextLevel)
     {
-        if (!PlayerPrefs.HasKey(SceneManager.GetActiveScene().name))
-        {
-            int money = (PlayerPrefs.HasKey("money")) ? PlayerPrefs.GetInt("money") : 0;
-            PlayerPrefs.SetString(SceneManager.GetActiveScene().name, "pass");
-            PlayerPrefs.SetInt("money", money + moneyAmount);
-            PlayerPrefs.Save();
-        }
-
         PivotPoint.Clear();
         BallController.Selected = null;
         instance = null;
@@ -78,6 +74,16 @@ public class GameController : MonoBehaviour
     public void ValidateLevel()
     {
         if (Validate())
+        {
+            if (!PlayerPrefs.HasKey(SceneManager.GetActiveScene().name))
+            {
+                int money = (PlayerPrefs.HasKey("money")) ? PlayerPrefs.GetInt("money") : 0;
+                PlayerPrefs.SetString(SceneManager.GetActiveScene().name, "pass");
+                PlayerPrefs.SetInt("money", money + moneyAmount);
+                PlayerPrefs.Save();
+            }
+
             winScreen.SetActive(true);
+        }
     }
 }

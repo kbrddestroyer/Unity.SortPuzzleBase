@@ -9,4 +9,11 @@ public class GUIController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void SwitchToActive(string defaultLevel)
+    {
+        string levelName = PlayerPrefs.GetString("activeLevel", defaultLevel);
+
+        SwitchScene(levelName);
+    }
 }
